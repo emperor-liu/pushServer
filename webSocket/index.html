@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>websocketd count example</title>
+    <script src="jquery.min.js"></script>
+    <script src="json2.js"></script>
+    <script src="CommonService.js"></script>
+    <script src="RegisterMessage.js"></script>
+    <style>
+      #count {
+        font: bold 150px arial;
+        margin: auto;
+        padding: 10px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    webSocket test
+
+    <div id="count">
+      
+
+    </div>
+    <button = onclick="send(1)">sendBuffer</button>
+    <button = onclick="send(3)">sendStr</button>
+
+<script type="text/javascript">
+    
+    var ws = new WebSocket('ws://127.0.0.1:9090');
+    //ws.binaryType = 'arraybuffer';
+    ws.onopen = function() {// 打开注册
+        console.info("open websocket");
+    };
+    ws.onclose = function() {
+        document.body.style.backgroundColor = null;
+    };
+    ws.onmessage = function(event) {
+        console.info("onmessage",event);
+        if(typeof event.data === String) {
+            console.log("Received data string");
+            console.log(event.data);
+        }
+
+        if(event.data instanceof ArrayBuffer){
+            var buffer = event.data;
+            console.log("Received arraybuffer");
+            console.log(event.data);
+        }
+    };
+    function send(type){
+        var messageInfo = getRequestParams("userId","123123","sessionId","1232131231231");
+        var registerMessage = getRequestParams("type","102","message",JSON.stringify(messageInfo));
+        var p = RegisterMessage(JSON.stringify(messageInfo));
+        var message = p.toArray();
+        console.info("messageInfo ",message);
+
+        var buffer = new ArrayBuffer(message.length);
+        //console.info(message.length);
+        var u8a = new Uint8Array(buffer);
+
+        var view = new DataView(buffer);
+        view.setUint32(0, message.length);
+        
+        for (var i = 0; i < message.length; i++) {
+            u8a[i] = message[i];
+        }
+        
+        if(type == 1){
+            console.info("send info buffer ==>> ",u8a.buffer);
+            ws.send(u8a.buffer);
+        }
+        if(type == 3){
+            console.info("send info str ==>> ",JSON.stringify(registerMessage));
+            ws.send(JSON.stringify(registerMessage));
+        }
+        
+    }
+</script>
+    
+  </body>
+</html>
