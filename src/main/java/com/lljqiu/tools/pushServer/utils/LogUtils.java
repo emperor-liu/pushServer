@@ -8,8 +8,8 @@
  */
 package com.lljqiu.tools.pushServer.utils;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /** 
  * ClassName: VSSLog.java <br>
@@ -18,7 +18,7 @@ import org.apache.commons.logging.LogFactory;
  * Create Time: 2017年3月29日<br>
  */
 public class LogUtils {
-    private static Log logger = LogFactory.getLog(LogUtils.class);
+    private static Logger logger = LoggerFactory.getLogger(LogUtils.class);
     
     /** 日志类型：系统日志 */
     public static String       system   = "System";
@@ -40,10 +40,30 @@ public class LogUtils {
             logger.debug(debug);
         }
     }
+    public static void debug(String debug, Object arg1) {
+        if (logger.isDebugEnabled()) {
+            logger.debug(debug, arg1);
+        }
+    }
+    public static void debug(String debug,Object arg1, Object arg2) {
+        if (logger.isDebugEnabled()) {
+            logger.debug(debug,arg1,arg2);
+        }
+    }
     
     public static void info(String info) {
         if (logger.isInfoEnabled()) {
-            logger.debug(info);
+            logger.info(info);
+        }
+    }
+    public static void info(String debug, Object arg1) {
+        if (logger.isInfoEnabled()) {
+            logger.info(debug, arg1);
+        }
+    }
+    public static void info(String debug,Object arg1, Object arg2) {
+        if (logger.isInfoEnabled()) {
+            logger.info(debug,arg1,arg2);
         }
     }
     public static void error(String error) {

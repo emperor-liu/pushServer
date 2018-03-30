@@ -38,12 +38,11 @@ public class Action102 extends ActionFactoy {
             log.info("<client register userinfo...>");
             String userInfo = new String(message.getBody());
             JSONObject userJson = JSONObject.parseObject(userInfo);
-            // 支持一个用户同时使用多个客户端
             String userId = userJson.getString("userId");
-            // sessionID，表示客户端连接 ID 具有唯一性
             String sessionid = userJson.getString("sessionid");
             log.info("<userId = " + userId + " & sessionid=" + sessionid + ">");
     
+            //获取当前用户所有连接 用户sessionid
             
             List<String> keys = redisClient.getLrange(Constants.CONNECTION_USER_KEY+userId, 0, -1);
             log.debug("keys{}",keys);
@@ -55,9 +54,7 @@ public class Action102 extends ActionFactoy {
                     SessionUsers.getInstance().clearSession(key);
                 }
             }
-            // 存储当前用户所有回话 ID，以便于后期使用
             redisClient.lpush(Constants.CONNECTION_USER_KEY+userId, sessionid);
-            // 保存回话生命周期，以便于后期发送消息
             SessionUsers.getInstance().addUserSession(sessionid, session);
             
             json.put("status", Constants.SUCCESS);

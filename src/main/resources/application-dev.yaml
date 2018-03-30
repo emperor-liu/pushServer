@@ -8,7 +8,7 @@ logging:
   
 #socket config
 socket:
-  port: 8080
+  port: 9090
   heartBeat: 600
   
 #redis config
