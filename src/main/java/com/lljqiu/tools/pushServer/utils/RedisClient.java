@@ -3,8 +3,8 @@
  * File Name RedisClient.java
  * Package Name com.lljqiu.tools.pushServer.utils
  * Create Time 2018年3月15日
- * Create by name：liujie -- email: jie_liu1@asdc.com.cn
- * Copyright © 2006, 2017, ASDC DAI. All rights reserved.
+ * Create by name：liujie -- email: liujie@lljqiu.com
+ * Copyright © 2015, 2017, www.lljqiu.com. All rights reserved.
  */
 package com.lljqiu.tools.pushServer.utils;
 
@@ -21,7 +21,7 @@ import redis.clients.jedis.Jedis;
 /** 
  * ClassName: RedisClient.java <br>
  * Description: 缓存操作<br>
- * @author name：liujie <br>email: jie_liu1@asdc.com.cn <br>
+ * @author name：liujie <br>email: liujie@lljqiu.com <br>
  * @date: 2018年3月15日<br>
  */
 public class RedisClient {
@@ -40,7 +40,7 @@ public class RedisClient {
      * @param key
      * @param value
      * @return void
-     * @author name：liujie <br>email: jie_liu1@asdc.com.cn
+     * @author name：liujie <br>email: liujie@lljqiu.com
      * @date 2017年10月24日
      **/
     public void put(String key, Object value) {
@@ -52,7 +52,7 @@ public class RedisClient {
      * @param key
      * @param value
      * @return void
-     * @author name：liujie <br>email: jie_liu1@asdc.com.cn
+     * @author name：liujie <br>email: liujie@lljqiu.com
      * @date 2017年10月24日
      **/
     public void lpush(String key, Object value) {
@@ -64,7 +64,7 @@ public class RedisClient {
      * @param key
      * @param value
      * @return void
-     * @author name：liujie <br>email: jie_liu1@asdc.com.cn
+     * @author name：liujie <br>email: liujie@lljqiu.com
      * @date 2017年10月24日
      **/
     public void rpush(String key, Object value) {
@@ -76,7 +76,7 @@ public class RedisClient {
      * @param key
      * @return
      * @return T
-     * @author name：liujie <br>email: jie_liu1@asdc.com.cn
+     * @author name：liujie <br>email: liujie@lljqiu.com
      * @date 2017年10月24日
      **/
     public <T> T lpop(String key) {
@@ -92,7 +92,7 @@ public class RedisClient {
      * @param key
      * @return
      * @return T
-     * @author name：liujie <br>email: jie_liu1@asdc.com.cn
+     * @author name：liujie <br>email: liujie@lljqiu.com
      * @date 2017年10月24日
      **/
     public <T> T rpop(String key) {
@@ -108,7 +108,7 @@ public class RedisClient {
      * @param key
      * @return
      * @return T
-     * @author name：liujie <br>email: jie_liu1@asdc.com.cn
+     * @author name：liujie <br>email: liujie@lljqiu.com
      * @date 2017年10月24日
      **/
     public <T> T get(String key) {
@@ -124,7 +124,7 @@ public class RedisClient {
      * @param key
      * @return
      * @return Set<String>
-     * @author name：liujie <br>email: jie_liu1@asdc.com.cn
+     * @author name：liujie <br>email: liujie@lljqiu.com
      * @date 2017年10月24日
      **/
     public Set<String> getKeys(String key) {
@@ -142,7 +142,7 @@ public class RedisClient {
      * Description：删除数据
      * @param key
      * @return void
-     * @author name：liujie <br>email: jie_liu1@asdc.com.cn
+     * @author name：liujie <br>email: liujie@lljqiu.com
      * @date 2017年10月24日
      **/
     public void del(String key) {
@@ -156,7 +156,7 @@ public class RedisClient {
      * @param end
      * @return
      * @return List<String>
-     * @author name：liujie <br>email: jie_liu1@asdc.com.cn
+     * @author name：liujie <br>email: liujie@lljqiu.com
      * @date 2018年3月15日
      **/
     public List<String> getLrange(String key,Integer start, Integer end){

@@ -3,8 +3,8 @@
  * File Name SessionUsers.java
  * Package Name com.lljqiu.tools.pushServer.stack
  * Create Time 2018年3月16日
- * Create by name：liujie -- email: jie_liu1@asdc.com.cn
- * Copyright © 2006, 2017, ASDC DAI. All rights reserved.
+ * Create by name：liujie -- email: liujie@lljqiu.com
+ * Copyright © 2015, 2017, www.lljqiu.com. All rights reserved.
  */
 package com.lljqiu.tools.pushServer.stack;
 
@@ -13,7 +13,7 @@ import java.util.HashMap;
 /** 
  * ClassName: SessionUsers.java <br>
  * Description: <br>
- * @author name：liujie <br>email: jie_liu1@asdc.com.cn <br>
+ * @author name：liujie <br>email: liujie@lljqiu.com <br>
  * @date: 2018年3月16日<br>
  */
 public class SessionUsers {
@@ -37,7 +37,7 @@ public class SessionUsers {
      * @param key sessionID
      * @param value
      * @return void
-     * @author name：liujie <br>email: jie_liu1@asdc.com.cn
+     * @author name：liujie <br>email: liujie@lljqiu.com
      * @date 2018年3月16日
      **/
     public void addUserSession(Object key,Object value) {
@@ -52,7 +52,7 @@ public class SessionUsers {
      * @param key
      * @return
      * @return Object
-     * @author name：liujie <br>email: jie_liu1@asdc.com.cn
+     * @author name：liujie <br>email: liujie@lljqiu.com
      **/
     public Object getSession(Object key){
         if (instance != null) {
@@ -65,7 +65,7 @@ public class SessionUsers {
      * Description：清除用户 session
      * @param key
      * @return void
-     * @author name：liujie <br>email: jie_liu1@asdc.com.cn
+     * @author name：liujie <br>email: liujie@lljqiu.com
      * @date 2018年3月16日
      **/
     public void clearSession(Object key) {

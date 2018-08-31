@@ -3,8 +3,8 @@
  * File Name package-info.java
  * Package Name com.lljqiu.tools.pushServer.action
  * Create Time 2018年3月15日
- * Create by name：liujie -- email: jie_liu1@asdc.com.cn
- * Copyright © 2006, 2017, ASDC DAI. All rights reserved.
+ * Create by name：liujie -- email: liujie@lljqiu.com
+ * Copyright © 2015, 2017, www.lljqiu.com. All rights reserved.
  */
 package com.lljqiu.tools.pushServer.action;
 
@@ -21,7 +21,7 @@ import com.lljqiu.tools.pushServer.utils.Constants;
 /** 
  * ClassName: Action102.java <br>
  * Description: 客户端注册用户信息<br>
- * Create by: name：liujie <br>email: jie_liu1@asdc.com.cn <br>
+ * Create by: name：liujie <br>email: liujie@lljqiu.com <br>
  * Create Time: 2017年6月6日<br>
  */
 public class Action102 extends ActionFactoy {

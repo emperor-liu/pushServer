@@ -3,8 +3,8 @@
  * File Name ReadYamlUtils.java
  * Package Name com.lljqiu.tools.pushServer.utils
  * Create Time 2018年3月15日
- * Create by name：liujie -- email: jie_liu1@asdc.com.cn
- * Copyright © 2006, 2017, ASDC DAI. All rights reserved.
+ * Create by name：liujie -- email: liujie@lljqiu.com
+ * Copyright © 2015, 2017, www.lljqiu.com. All rights reserved.
  */
 package com.lljqiu.tools.pushServer.utils;
 
@@ -21,7 +21,7 @@ import org.yaml.snakeyaml.Yaml;
 /** 
  * ClassName: ReadYamlUtils.java <br>
  * Description: <br>
- * @author name：liujie <br>email: jie_liu1@asdc.com.cn <br>
+ * @author name：liujie <br>email: liujie@lljqiu.com <br>
  * @date: 2018年3月15日<br>
  */
 @Component
@@ -86,7 +86,7 @@ public class ReadYamlUtils {
     /** 
      * Description： 获取心跳时间
      * @return Integer
-     * @author name：liujie <br>email: jie_liu1@asdc.com.cn
+     * @author name：liujie <br>email: liujie@lljqiu.com
      * @date 2018年3月15日
      **/
     public static Integer getSocketHeartBeat() {
@@ -96,7 +96,7 @@ public class ReadYamlUtils {
     /** 
      * Description：获取 redis 配置信息-ip
      * @return String
-     * @author name：liujie <br>email: jie_liu1@asdc.com.cn
+     * @author name：liujie <br>email: liujie@lljqiu.com
      * @date 2018年3月15日
      **/
     public static String getRedisIp() {
@@ -106,7 +106,7 @@ public class ReadYamlUtils {
     /** 
      * Description： 获取 redis 端口
      * @return Integer
-     * @author name：liujie <br>email: jie_liu1@asdc.com.cn
+     * @author name：liujie <br>email: liujie@lljqiu.com
      * @date 2018年3月15日
      **/
     public static Integer getRedisPort() {

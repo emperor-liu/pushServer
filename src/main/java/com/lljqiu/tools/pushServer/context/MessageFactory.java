@@ -3,8 +3,8 @@
  * File Name MessageFactory.java
  * Package Name com.lljqiu.tools.pushServer.context
  * Create Time 2018年3月15日
- * Create by name：liujie -- email: jie_liu1@asdc.com.cn
- * Copyright © 2006, 2017, ASDC DAI. All rights reserved.
+ * Create by name：liujie -- email: liujie@lljqiu.com
+ * Copyright © 2015, 2017, www.lljqiu.com. All rights reserved.
  */
 package com.lljqiu.tools.pushServer.context;
 
@@ -16,7 +16,7 @@ import com.lljqiu.tools.pushServer.action.ActionService;
 /** 
  * ClassName: MessageFactory.java <br>
  * Description: 消息工厂<br>
- * @author name：liujie <br>email: jie_liu1@asdc.com.cn <br>
+ * @author name：liujie <br>email: liujie@lljqiu.com <br>
  * @date: 2018年3月15日<br>
  */
 public class MessageFactory {
@@ -79,7 +79,7 @@ private static String BASE_PACKAGE = "com.lljqiu.tools.pushServer.action.";
      * @param cid
      * @return
      * @return ActionService
-     * @author name：liujie <br>email: jie_liu1@asdc.com.cn
+     * @author name：liujie <br>email: liujie@lljqiu.com
      **/
     public static ActionService createService(short msgid) throws Exception {
         Class<?> c = getClazz(CLASS_HEAD, msgid);
