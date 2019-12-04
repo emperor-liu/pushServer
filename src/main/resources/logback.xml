@@ -23,7 +23,7 @@
                 <pattern>${PATTERN}</pattern>
             </encoder>
         </appender>
-        <logger name="com.lljqiu.tools.pushServer" level="debug" />
+        <logger name="com.huxiaosu.tools.pushserver" level="debug" />
         <root level="info">
             <appender-ref ref="CONSOLE" />
         </root>
@@ -47,7 +47,7 @@
                 <MaxFileSize>10MB</MaxFileSize>
             </triggeringPolicy>
 		</appender>
-		<logger name="com.lljqiu.tools.pushServer" level="info" />
+		<logger name="com.huxiaosu.tools.pushserver" level="info" />
 		<root level="info">
 			<appender-ref ref="TEST-FILE" />
 		</root>
@@ -71,7 +71,7 @@
 				<MaxFileSize>10MB</MaxFileSize>
 			</triggeringPolicy>
 		</appender>
-		<logger name="com.lljqiu.tools.pushServer" level="info" />
+		<logger name="com.huxiaosu.tools.pushserver" level="info" />
 		<root level="info">
 			<appender-ref ref="PRO-FILE" />
 		</root>

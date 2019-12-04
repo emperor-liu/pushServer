@@ -3,12 +3,12 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.lljqiu.tools</groupId>
-	<artifactId>pushServer</artifactId>
+	<groupId>com.huxiaosu.tools</groupId>
+	<artifactId>pushserver</artifactId>
 	<version>2.0.0</version>
 	<packaging>jar</packaging>
 
-	<name>pushServer</name>
+	<name>push-server</name>
 	<description>Mina Socket Server project</description>
 
 	<parent>
@@ -21,7 +21,7 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<java.version>1.7</java.version>
+		<java.version>1.8</java.version>
 		<spring-cloud.version>Dalston.SR4</spring-cloud.version>
 	</properties>
 
@@ -71,7 +71,12 @@
 			<groupId>com.google.code.gson</groupId>
 			<artifactId>gson</artifactId>
 		</dependency>
-	</dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.16.22</version>
+        </dependency>
+    </dependencies>
 
 	<dependencyManagement>
 		<dependencies>
