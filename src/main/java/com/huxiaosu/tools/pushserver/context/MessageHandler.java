@@ -11,9 +11,8 @@ package com.huxiaosu.tools.pushserver.context;
 import com.huxiaosu.tools.pushserver.stack.BaseMessage;
 import com.huxiaosu.tools.pushserver.stack.SessionUsers;
 import com.huxiaosu.tools.pushserver.utils.Constants;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.builder.ToStringBuilder;
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
 import org.apache.mina.core.service.IoHandlerAdapter;
 import org.apache.mina.core.session.IdleStatus;
 import org.apache.mina.core.session.IoSession;
@@ -24,8 +23,8 @@ import org.apache.mina.core.session.IoSession;
  * @author name：liujie <br>email: liujie@huxiaosu.com <br>
  * @date: 2018年3月15日<br>
  */
+@Slf4j
 public class MessageHandler extends IoHandlerAdapter {
-    private static Log            log          = LogFactory.getLog(MessageHandler.class);
 
     protected static final String TSSESSIONKEY = "MPSession_Key";
 

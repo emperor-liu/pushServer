@@ -14,6 +14,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import com.huxiaosu.tools.pushserver.config.PushServerConfig;
 import org.apache.commons.lang3.SerializationUtils;
 
 import redis.clients.jedis.Jedis;
@@ -26,12 +27,13 @@ import redis.clients.jedis.Jedis;
  */
 public class RedisClient {
     private static Jedis jedis;
-    protected String     IP ;//= "127.0.0.1";
-    protected int        PORT;// = 6379;
+    protected String     IP ;
+    protected int        PORT;
 
     public RedisClient() {
-        this.IP = ReadYamlUtils.getRedisIp();
-        this.PORT = ReadYamlUtils.getRedisPort();
+        PushServerConfig pushServerConfig = SpringUtil.getBean(PushServerConfig.class);
+        this.IP = pushServerConfig.getRedisIp();
+        this.PORT = pushServerConfig.getRedisPort();
         jedis = new Jedis(IP, PORT);
     }
 

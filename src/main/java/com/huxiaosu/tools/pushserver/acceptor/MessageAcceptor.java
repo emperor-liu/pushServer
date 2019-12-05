@@ -13,7 +13,6 @@ import java.util.concurrent.Executors;
 
 import com.huxiaosu.tools.pushserver.codec.MPCodecFactory;
 import com.huxiaosu.tools.pushserver.utils.Constants;
-import com.huxiaosu.tools.pushserver.utils.ReadYamlUtils;
 import org.apache.mina.core.service.IoAcceptor;
 import org.apache.mina.core.session.IdleStatus;
 import org.apache.mina.filter.codec.ProtocolCodecFilter;
@@ -37,7 +36,7 @@ import com.huxiaosu.tools.pushserver.filter.KeepAliveMessageFactoryImpl;
 public class MessageAcceptor {
     private static Logger LOGGER = LoggerFactory.getLogger(MessageAcceptor.class);
     
-    public void start(){
+    public void start(Integer socketPort,Integer socketHeartBeat){
         try {
             IoAcceptor acceptor = new NioSocketAcceptor();
             acceptor.getFilterChain().addLast("logger", new LoggingFilter());
@@ -46,22 +45,24 @@ public class MessageAcceptor {
             acceptor.getFilterChain().addLast("codec", new ProtocolCodecFilter(new MPCodecFactory(Constants.CHARTSET)));
 //            acceptor.getFilterChain().addLast("codec", new ProtocolCodecFilter(new TextLineCodecFactory(Charset.forName("UTF-8"))));// 指定编码过滤器
             acceptor.getFilterChain().addLast("threadPool", new ExecutorFilter(Executors.newCachedThreadPool()));
-            acceptor.getSessionConfig().setReadBufferSize(2048*5000);//发送缓冲区10M
+            //发送缓冲区10M
+            acceptor.getSessionConfig().setReadBufferSize(2048*5000);
 //            acceptor.getSessionConfig().set
             KeepAliveMessageFactoryImpl kamfi = new KeepAliveMessageFactoryImpl();
             KeepAliveFilter kaf = new KeepAliveFilter(kamfi, IdleStatus.BOTH_IDLE);
             /** 是否回发 */
             kaf.setForwardEvent(true);
             acceptor.getFilterChain().addLast("heart", kaf);
-            
-            acceptor.setHandler(new MessageHandler());// 指定业务逻辑处理器
-            acceptor.setDefaultLocalAddress(new InetSocketAddress(ReadYamlUtils.getSocketPost()));// 设置端口号
+            // 指定业务逻辑处理器
+            acceptor.setHandler(new MessageHandler());
+            // 设置端口号
+            acceptor.setDefaultLocalAddress(new InetSocketAddress(socketPort));
 
-            acceptor.getSessionConfig().setIdleTime(IdleStatus.BOTH_IDLE, ReadYamlUtils.getSocketHeartBeat());
+            acceptor.getSessionConfig().setIdleTime(IdleStatus.BOTH_IDLE, socketHeartBeat);
            
             acceptor.bind();// 启动监听
 
-            LOGGER.info("server start success, port is " + ReadYamlUtils.getSocketPost());
+            LOGGER.info("server start success, port is " + socketPort);
 
         } catch (Exception e) {
             LOGGER.error(e.getMessage());

@@ -10,8 +10,7 @@ package com.huxiaosu.tools.pushserver.filter;
 
 import java.net.InetSocketAddress;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.mina.core.filterchain.IoFilterAdapter;
 import org.apache.mina.core.session.IoSession;
 
@@ -21,9 +20,9 @@ import org.apache.mina.core.session.IoSession;
  * @author name：liujie <br>email: liujie@huxiaosu.com <br>
  * @date: 2018年3月15日<br>
  */
+@Slf4j
 public class ConnectionFilter extends IoFilterAdapter{
     
-    private static Log log = LogFactory.getLog(ConnectionFilter.class);
 
     @Override
     public void messageReceived(NextFilter nextFilter, IoSession session, Object message) throws Exception {

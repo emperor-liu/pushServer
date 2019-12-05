@@ -9,7 +9,7 @@
 package com.huxiaosu.tools.pushserver.action;
 
 import com.huxiaosu.tools.pushserver.utils.RedisClient;
-import org.apache.log4j.Logger;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.mina.core.session.IoSession;
 
 import com.huxiaosu.tools.pushserver.stack.BaseMessage;
@@ -20,6 +20,7 @@ import com.huxiaosu.tools.pushserver.stack.BaseMessage;
  * @author liujie <br>email: liujie@huxiaosu.com <br>
  * Create Time: 2017年6月5日<br>
  */
+@Slf4j
 public abstract class ActionFactoy implements ActionService {
     protected IoSession session;
     protected BaseMessage message;
@@ -35,7 +36,7 @@ public abstract class ActionFactoy implements ActionService {
             this.message = message;
             exec();
         } catch (Exception e) {
-            Logger.getLogger(getClass()).error("ActionFactoy doProcess error{}",e);
+            log.error("ActionFactoy doProcess error{}",e);
         } 
     }
 }
