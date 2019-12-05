@@ -1,10 +1,10 @@
 /**
  * Project Name pushServer
  * File Name package-info.java
- * Package Name com.lljqiu.tools.pushServer.action
+ * Package Name com.huxiaosu.tools.pushserver.action
  * Create Time 2018年3月15日
  * Create by name：liujie -- email: liujie@huxiaosu.com
- * Copyright © 2015, 2017, www.lljqiu.com. All rights reserved.
+ *
  */
 package com.huxiaosu.tools.pushserver.action;
 
@@ -12,6 +12,7 @@ import java.util.List;
 
 import com.huxiaosu.tools.pushserver.stack.SessionUsers;
 import com.huxiaosu.tools.pushserver.utils.Constants;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.mina.core.session.IoSession;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -24,13 +25,10 @@ import com.alibaba.fastjson.JSONObject;
  * @author liujie <br>email: liujie@huxiaosu.com <br>
  * Create Time: 2017年6月6日<br>
  */
+@Slf4j
 public class Action102 extends ActionFactoy {
 
-    private static Logger log = LoggerFactory.getLogger(Action102.class);
 
-    /* (non-Javadoc)
-     * @see com.asdc.messagepush.action.ActionFactoy#exec()
-     */
     @Override
     protected void exec() throws Exception {
         JSONObject json = new JSONObject();

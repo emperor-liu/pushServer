@@ -4,7 +4,7 @@
  * Package Name com.asdc.messagepush.test
  * Create Time 2017年6月5日
  * Create by name：liujie -- email: liujie@huxiaosu.com
- * Copyright © 2015, 2017, www.lljqiu.com. All rights reserved.
+ *
  */
 package com.huxiaosu.tools.pushserver.socketClient;
 

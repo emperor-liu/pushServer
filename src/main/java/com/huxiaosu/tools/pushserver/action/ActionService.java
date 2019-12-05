@@ -1,10 +1,10 @@
 /**
  * Project Name pushServer
  * File Name package-info.java
- * Package Name com.lljqiu.tools.pushServer.action
+ * Package Name com.huxiaosu.tools.pushserver.action
  * Create Time 2018年3月15日
  * Create by name：liujie -- email: liujie@huxiaosu.com
- * Copyright © 2015, 2017, www.lljqiu.com. All rights reserved.
+ *
  */
 package com.huxiaosu.tools.pushserver.action;
 

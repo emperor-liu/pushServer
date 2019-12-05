@@ -1,10 +1,10 @@
 /**
  * Project Name pushServer
  * File Name package-info.java
- * Package Name com.lljqiu.tools.pushServer.utils
+ * Package Name com.huxiaosu.tools.pushserver.utils
  * Create Time 2018年3月15日
  * Create by name：liujie -- email: liujie@huxiaosu.com
- * Copyright © 2015, 2017, www.lljqiu.com. All rights reserved.
+ *
  */
 package com.huxiaosu.tools.pushserver.utils;
 
@@ -43,11 +43,11 @@ public class Constants {
     /** 统一编码*/
     public final static String CHARTSET               = "UTF-8";
 
-    public final static String USER_DOWNLOAD_KEY      = "com.lljqiu.tools.pushServer.action.Action102#online_PUSH_USERINFO#";
-    public final static String ONLINE_USER_INFO       = "com.lljqiu.tools.pushServer.action.Action102#online_user_sessionList#";
+    public final static String USER_DOWNLOAD_KEY      = "com.huxiaosu.tools.pushserver.action.Action102#online_PUSH_USERINFO#";
+    public final static String ONLINE_USER_INFO       = "com.huxiaosu.tools.pushserver.action.Action102#online_user_sessionList#";
     /** 链接用户 key 前缀 */
-    public final static String CONNECTION_SESSION_KEY = "com.lljqiu.tools.pushServer#connectionUserSession#";
-    public final static String CONNECTION_USER_KEY    = "com.lljqiu.tools.pushServer#connectionUser#";
+    public final static String CONNECTION_SESSION_KEY = "com.huxiaosu.tools.pushserver#connectionUserSession#";
+    public final static String CONNECTION_USER_KEY    = "com.huxiaosu.tools.pushserver#connectionUser#";
     public final static CharsetDecoder     CHAR_SETDE_DCODER         = Charset.forName("utf-8").newDecoder();
     public final static CharsetEncoder     CHAR_SETDE_ECODER         = Charset.forName("utf-8").newEncoder();
 

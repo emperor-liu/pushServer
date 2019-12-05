@@ -1,10 +1,10 @@
 /**
  * Project Name pushServer
  * File Name ClientHandler.java
- * Package Name com.lljqiu.tools.pushServer.socketClient
+ * Package Name com.huxiaosu.tools.pushserver.socketClient
  * Create Time 2017年6月6日
  * Create by name：liujie -- email: liujie@huxiaosu.com
- * Copyright © 2015, 2017, www.lljqiu.com. All rights reserved.
+ *
  */
 package com.huxiaosu.tools.pushserver.socketClient;
 
